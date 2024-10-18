@@ -8,13 +8,13 @@ const cors = require('cors');
 
 const app = express()
 
-const MONGODB_URI_PROD = process.env.MONGODB_URI_PROD
+// const MONGODB_URI_PROD = process.env.MONGODB_URI_PROD
 
 app.use(cors())
 app.use(bodyParser.json())
 app.use('/api', indexRouter)
 
-const mongoURI = MONGODB_URI_PROD
+const mongoURI = "mongodb+srv://cruby7eo:3nhP_sM2w3ieKNk@cluster0.x8ui1.mongodb.net/todo-app" //MONGODB_URI_PROD
 
 mongoose
     .connect(mongoURI, {useNewUrlParser: true})
