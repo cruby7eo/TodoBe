@@ -15,6 +15,8 @@ app.use(bodyParser.json())
 app.use('/api', indexRouter)
 
 const mongoURI = "mongodb+srv://cruby7eo:3nhP_sM2w3ieKNk@cluster0.x8ui1.mongodb.net/todo-app" //MONGODB_URI_PROD
+console.log(mongoURI);
+
 
 mongoose
     .connect(mongoURI, {useNewUrlParser: true})
